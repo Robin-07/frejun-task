@@ -46,14 +46,14 @@ class OutboundSMSSerializer(serializers.Serializer):
         response = {"message" : "", "error" : ""}
         _from = validated_data.get("from")
         _to = validated_data.get("to")
-        if cache.get(_from) == _to:
+        if cache.get(_to) == _from:
             response["error"] = f"sms from {_from} to {_to} blocked by STOP request"
             return response
         cache_key = _from + " count"
         total_requests = cache.get(cache_key)
         if not total_requests:
             cache.set(cache_key, 1, timeout=86400)
-        elif total_requests < 5:
+        elif total_requests < 50:
             cache.set(cache_key, total_requests + 1)
         else:
             response["error"] = f"limit reached for from {_from}"
