@@ -7,6 +7,6 @@
 ### 4. Populate the Postgres server with the data dump and then inside src directory, run commands `python manage.py makemigrations` and `python manage.py migrate`
 ### 5. Start local development server by using command `python manage.py runserver` inside src directory
 ## Testing
-**While the local server is running, run command `python manage.py test` inside src directory**
+### While the local server is running, run command `python manage.py test` inside src directory. This will run all the tests.
 ## Heroku Deployment
-**I have deployed the app on heroku - https://dj-sms-service.herokuapp.com/ but some DB changes are required for it to work properly**
+#### I have deployed the app on heroku - https://dj-sms-service.herokuapp.com/ but some DB changes are required for it to work properly
