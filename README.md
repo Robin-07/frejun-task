@@ -8,3 +8,5 @@
 ### 5. Start local development server by using command `python manage.py runserver` inside src directory
 ## Testing
 **While the local server is running, run command `python manage.py test` inside src directory**
+## Heroku Deployment
+**I have deployed the app on heroku - https://dj-sms-service.herokuapp.com/ but some DB changes are required for it to work properly**
